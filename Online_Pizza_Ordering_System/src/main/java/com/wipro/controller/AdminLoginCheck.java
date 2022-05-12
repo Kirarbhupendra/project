@@ -49,7 +49,8 @@ public class AdminLoginCheck extends HttpServlet {
    ResultSet rs= pst.executeQuery();
    if(rs.next())
    {
-	   pw.println("<h2>You Can Continue</h2>");
+	   RequestDispatcher dispatcher = request.getRequestDispatcher("/WelcomeAdmin.jsp");
+		dispatcher.forward(request, response);
 			 
    }
    else {

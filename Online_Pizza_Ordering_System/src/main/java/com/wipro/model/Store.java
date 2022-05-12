@@ -2,6 +2,8 @@ package com.wipro.model;
 
 public class Store {
 //	String StoreID;
+	String StoreName;
+	
 	String Address;
 	String PhoneNumber;
 //	public String getStoreID() {
@@ -21,6 +23,12 @@ public class Store {
 	}
 	public void setPhoneNumber(String phoneNumber) {
 		PhoneNumber = phoneNumber;
+	}
+	public String getStoreName() {
+		return StoreName;
+	}
+	public void setStoreName(String storeName) {
+		StoreName = storeName;
 	}
 	
 	

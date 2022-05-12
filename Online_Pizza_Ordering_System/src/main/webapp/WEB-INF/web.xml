@@ -59,4 +59,24 @@
     <servlet-name>AdminLoginCheck</servlet-name>
     <url-pattern>/AdminLoginCheck</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddStore</display-name>
+    <servlet-name>AddStore</servlet-name>
+    <servlet-class>com.wipro.controller.AddStore</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddStore</servlet-name>
+    <url-pattern>/AddStore</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddStoreDetails</display-name>
+    <servlet-name>AddStoreDetails</servlet-name>
+    <servlet-class>com.wipro.controller.AddStore</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddStoreDetails</servlet-name>
+    <url-pattern>/AddStoreDetails</url-pattern>
+  </servlet-mapping>
 </web-app>
