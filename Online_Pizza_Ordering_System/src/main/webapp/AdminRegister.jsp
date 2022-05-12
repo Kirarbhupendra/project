@@ -1,0 +1,60 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <link href="CSS/index_bg.css" type="text/css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<title>Admin Login</title>
+</head>
+<body class="bg">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4 col-sm-4 col-xs-12"></div>
+		<div class="col-md-4 col-sm-4 col-xs-12">
+	<form action="<%=request.getContextPath() %>/adminregister" method="post" class="form-container">
+			<h1 class="header"> Register for awesome Pizza!</h1>
+			<div class="form-group">
+				<label for="InputEmployeeId">EmplyeeID</label>
+					<input name="employeeid" class="form-control" id="InputEmpoyeeid" placeholder="EmployeeID" required> 
+			</div>
+			<div class="form-group">
+				<label for="InputFirstName">First Name</label>
+					<input name="firstname" class="form-control" id="InputName" placeholder="FirstName" required> 
+			</div>
+			<div class="form-group">
+				<label for="InputLastName">Last Name</label>
+					<input name="lastname" class="form-control" id="InputName" placeholder="LastName" required> 
+			</div>
+			<div class="form-group">
+				<label for="InputAddress">Address</label>
+					<input name="address" class="form-control" id="InputAddress" placeholder="Address" required> 
+			</div>
+  			<div class="form-group">
+    			<label for="exampleInputEmail1">Email address</label>
+    				<input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email" required>
+  			</div>
+  			<div class="form-group">
+    			<label for="exampleInputEmail1">Phone Number</label>
+    				<input type="number" name="phoneno" class="form-control" id="exampleNumberInput1" placeholder="Number" required>
+  			</div>
+  			<div class="form-group">
+    			<label for="InputPassword">Password</label>
+    				<input type="password" pattern=".{6,}" required title="6 characters minimum" name="password" class="form-control" id="InputPassword" type="password" placeholder="Password" required>
+    			<label for="ConfirmInputPassword1">Confirm Password</label>
+    				<input name="confirmPassword" class="form-control" id="ConfirmInputPassword" type="password" placeholder="Password" required> 	
+  			</div>
+  			 
+  			<button type="submit" class="btn btn-success btn-block" onclick="index.html">Register</button>
+			
+	</form>
+		</div>
+		<div class="col-md-4 col-sm-4 col-xs-12"></div>
+	</div>
+</div>
+</body>
+</html>

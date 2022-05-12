@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+</head>
+<style>
+
+
+    
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+</style>
+<body>
+<div class="centered" id="parent">
+<h1>Welcome to Xyz Pizza Store</h1>
+<form action="./Login" method="get" id="form_login" >
+ <p >Please select your preferred  method to login : type(admin/user)</p>
+ <label><input type="radio" name="choice" id="user" value="user" required>User</input></label><br><br>
+ <label><input type="radio" name="choice" id="admin" value="admin"required>Administrator</input></label><br><br>
+ <input type="submit"style="text-align : center">
+</form>
+  </div>
+ 
+</body>
+</html>
