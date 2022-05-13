@@ -3,43 +3,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-  <link href="CSS/index_bg.css" type="text/css" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-<title>Admin Login</title>
-
-
+	<meta charset="ISO-8859-1">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="bootstrap/css/styleUser.css" type="text/css" rel="stylesheet">
+	<title>Admin Login</title>
 </head>
-<body class="bg">
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-4 col-sm-4 col-xs-12"></div>
-		<div class="col-md-4 col-sm-4 col-xs-12">
-	<form action="admincheck" method="post" class="form-container">
-			<h1 class="header"> Login for awesome Pizza!</h1>
-  			<div class="form-group">
-    			<label for="InputEmail">Email address</label>
-    				<input type="email" name="email" class="form-control" id="InputEmail" placeholder="Email" required>
-  			</div>
-  			<div class="form-group">
-    			<label for="InputPassword">Password</label>
-    				<input type="password" name="password" class="form-control" id="InputPassword" placeholder="Password" required>
-  			</div>
-  			 
-  			<div class="checkbox">
-    			<label>
-     				<input type="checkbox"> Remember Me
-    			</label>
-  			</div>
-  			<button type="submit" class="btn btn-success btn-block">Login</button>
-			<div align="JUSTIFY">New user?<a class="register" href="AdminRegister.jsp"><b> <i>Register here</i></b></a></div> 
-	</form>
-		</div>
-		<div class="col-md-4 col-sm-4 col-xs-12"></div>
-	</div>
-</div>
+<body>
+
+<div id="bg"></div>
+
+<form action="admincheck" method="post">
+	<h2> Login for awesome Pizza!</h2>
+ 	<div class="form-field">
+    	<input type="email" name="email" id="InputEmail" placeholder="Email" required>
+    </div>
+  
+  	<div class="form-field">
+    	<input type="password" name="password" id="InputPassword" placeholder="Password" required> 
+    </div>
+  
+  	<div class="form-field">
+    	<button class="btn" type="submit">Login</button>
+		<p class="text">Don't have an account? <a href="AdminRegister.jsp">Register</a></p>
+  	</div>
+</form>
+
 </body>
 </html>
