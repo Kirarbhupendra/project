@@ -27,7 +27,7 @@
             <div class="container-fluid">
               <button onclick="openForm()">Add Store</button>
               <button onclick="openFormModify()">Modify Store</button>
-              <button>View Store</button>
+              <a href="./ViewStoreList.jsp">View</a>
             </div>
           </nav>
     </div>
@@ -89,7 +89,7 @@
         </form>
     </div>
 </body>
-<script>
+<script >
     function openForm() {
         document.getElementById("popupForm").style.display = "block";
         document.getElementById("popupFormModify").style.display = "none";
@@ -115,6 +115,8 @@
         document.getElementById("popupFormMod").style.display = "none";
         
       }
+      document.getElementById("myButton").onclick = function () {
+      location.href = "www.yoursite.com";
     
 
 </script>
