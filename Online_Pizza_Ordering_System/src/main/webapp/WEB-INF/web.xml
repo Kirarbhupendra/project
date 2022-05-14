@@ -79,4 +79,24 @@
     <servlet-name>AddStoreDetails</servlet-name>
     <url-pattern>/AddStoreDetails</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>modifystore</display-name>
+    <servlet-name>modifystore</servlet-name>
+    <servlet-class>com.wipro.controller.modifystore</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>modifystore</servlet-name>
+    <url-pattern>/modifystore</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ModifyStoreInput</display-name>
+    <servlet-name>ModifyStoreInput</servlet-name>
+    <servlet-class>com.wipro.controller.ModifyStoreInput</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModifyStoreInput</servlet-name>
+    <url-pattern>/ModifyStoreInput</url-pattern>
+  </servlet-mapping>
 </web-app>

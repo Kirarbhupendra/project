@@ -56,12 +56,12 @@
 
 
     <div class="formPopup" id="popupFormModify">
-        <form >
+        <form action="./ModifyStore" method="get">
             <div class="form-group">
                 <label>Store ID</label>
-                <input type="text" required>
+                <input type="text" name="id" required>
             </div>
-            <button type="submit" class="btn btn-primary" onclick="openFormMod()">Search</button>
+            <button type="submit" class="btn btn-primary">Search</button>
             <button class="btn btn-primary" onclick="closeFormModify()">Close</button>
         </form>
     </div>
@@ -75,12 +75,12 @@
             
             <div class="form-group">
                 <label>Address</label>
-                <input type="text" value=""required>
+                <input type="text" required>
             </div>
 
             
             <div class="form-group">
-                <label>Phone Address</label>
+                <label>Phone</label>
                 <input type="text" required>
             </div>
 
