@@ -5,7 +5,22 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>ModifyFood</title>
+<link rel="stylesheet" href="./bootstrap/css/styleUser.css">
 </head>
+<style>
+     .formPopup {
+        display: none;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 150px;
+        margin-left: 80px;
+        Padding-top: 100px;
+        Padding-bottom: 100px;
+        Padding-right: 150px;
+        Padding-left: 80px;
+        background-color: lightblue;
+     }
+</style>
 <body>
     <div id="popupFormModify">
         <form class="form-container">
