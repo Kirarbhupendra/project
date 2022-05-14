@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
- <link rel="stylesheet" href="./styleUser.css">
+ <link rel="stylesheet" href="./bootstrap/css/styleUser.css">
 <title>Add Food</title>
 
 </head>
