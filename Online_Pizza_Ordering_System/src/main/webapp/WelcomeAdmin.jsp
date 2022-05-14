@@ -115,9 +115,7 @@
         document.getElementById("popupFormMod").style.display = "none";
         
       }
-      document.getElementById("myButton").onclick = function () {
-      location.href = "www.yoursite.com";
-    
+      
 
 </script>
 

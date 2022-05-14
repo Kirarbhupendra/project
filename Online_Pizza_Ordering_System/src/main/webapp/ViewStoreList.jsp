@@ -33,7 +33,7 @@
 					        <td>Pizzahut</td>
 					        <td>Bhopal</td>
 					        <td>8745697452</td>
-					        <td><a href="indexStore.html" class="btn btn-success">View</a></td>
+					        <td><a href="./viewstore.jsp" class="btn btn-success">View</a></td>
 					      </tr>
 					      <tr>
 					        <th scope="row" class="scope" >2</th>
@@ -41,7 +41,7 @@
 					        <td>Mumbai</td>
 					        <td>8745697452</td>
 					        
-					        <td><a href="indexStore.html" class="btn btn-success">View</a></td>
+					        <td><a href="./viewstore.jsp" class="btn btn-success">View</a></td>
 					      </tr>
 					      <tr>
 					        <th scope="row" class="scope" >3</th>
@@ -49,7 +49,7 @@
 					        <td>Patiala</td>
 					        <td>8745697452</td>
 					        
-					        <td><a href="indexStore.html" class="btn btn-success">View</a></td>
+					        <td><a href="./viewstore.jsp" class="btn btn-success">View</a></td>
 					      </tr>
 					      <tr>
 					        <th scope="row" class="scope" >4</th>
@@ -57,15 +57,9 @@
 					        <td>Delhi</td>
 					        <td>8745697452</td>
 					        
-					        <td><a href="indexStore.html" class="btn btn-success">View</a></td>
+					        <td><a href="./viewstore.jsp" class="btn btn-success">View</a></td>
 					      </tr>
-					      <tr>
-					        <th scope="row" class="scope border-bottom-0">5</th>
-					        <td class="border-bottom-0">Subway</td>
-					        <td class="border-bottom-0">Delhi</td>
-					        <td class="border-bottom-0">8745697452</td>s
-					        <td class="border-bottom-0"><a href="indexStore.html" class="btn btn-success">View</a></td>
-					      </tr>
+					    
 					    </tbody>
 					  </table>
 					</div>
