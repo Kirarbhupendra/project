@@ -1,5 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.SQLException"%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +19,26 @@
 <title>Storelist</title>
 </head>
 <body>
+<%
+
+
+try {
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	
+	
+	
+	
+} catch (ClassNotFoundException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+Connection con=null;
+Statement smt = null;
+ResultSet rst = null;
+
+
+
+%>
 <section class="ftco-section">
 		<div class="container" style="padding-top: 50px">
 			<div class="row">
@@ -28,37 +56,40 @@
 					      </tr>
 					    </thead>
 					    <tbody>
-					      <tr>
-					        <th scope="row" class="scope" >1</th>
-					        <td>Pizzahut</td>
-					        <td>Bhopal</td>
-					        <td>8745697452</td>
-					        <td><a href="./viewstore.jsp" class="btn btn-success">View</a></td>
-					      </tr>
-					      <tr>
-					        <th scope="row" class="scope" >2</th>
-					        <td>Dominos</td>
-					        <td>Mumbai</td>
-					        <td>8745697452</td>
-					        
-					        <td><a href="./viewstore.jsp" class="btn btn-success">View</a></td>
-					      </tr>
-					      <tr>
-					        <th scope="row" class="scope" >3</th>
-					        <td>Pizza House</td>
-					        <td>Patiala</td>
-					        <td>8745697452</td>
-					        
-					        <td><a href="./viewstore.jsp" class="btn btn-success">View</a></td>
-					      </tr>
-					      <tr>
-					        <th scope="row" class="scope" >4</th>
-					        <td>KFC</td>
-					        <td>Delhi</td>
-					        <td>8745697452</td>
-					        
-					        <td><a href="./viewstore.jsp" class="btn btn-success">View</a></td>
-					      </tr>
+					      <%
+					      try{
+					     con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","oracle","tiger");
+					  	smt = con.createStatement();
+					  	String sql="SELECT * FROM StoreDetails";
+					  	
+					   rst = smt.executeQuery(sql);
+					   while(rst.next()){
+						   %>
+						   <tr>
+						   <td><%= rst.getString("StoreId") %></td>
+						   <td><%= rst.getString("StoreName") %></td>
+						   <td><%= rst.getString("Address") %></td>
+						   <td><%= rst.getString("PhoneNo") %></td>
+						   <td><a href="./viewstore.jsp" class="btn btn-success">View</a></td>
+						   
+						   </tr>
+						   
+						 
+						   
+						   
+					   
+					   <%
+					      }
+					      }
+					      catch(Exception e){
+					    	  e.printStackTrace();
+					      }
+					      
+					     
+					   %>
+					      
+					      
+					     
 					    
 					    </tbody>
 					  </table>
