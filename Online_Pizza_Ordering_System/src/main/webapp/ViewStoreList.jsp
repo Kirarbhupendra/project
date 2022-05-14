@@ -70,11 +70,12 @@ ResultSet rst = null;
 						   <td><%= rst.getString("StoreName") %></td>
 						   <td><%= rst.getString("Address") %></td>
 						   <td><%= rst.getString("PhoneNo") %></td>
-						   <td><a href="./viewstore.jsp" class="btn btn-success">View</a></td>
+						   <td><a href='./viewstore.jsp?u=<%=rst.getString("StoreId") %>' class="btn btn-success">View</a></td>
+						  
 						   
 						   </tr>
 						   
-						 
+					
 						   
 						   
 					   

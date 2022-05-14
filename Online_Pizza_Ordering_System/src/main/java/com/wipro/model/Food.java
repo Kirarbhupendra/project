@@ -1,7 +1,7 @@
 package com.wipro.model;
 
 public class Food {
-	
+	String StoreId;
 	String FoodName;
 	int Cost;
 	public String getFoodName() {
@@ -15,6 +15,12 @@ public class Food {
 	}
 	public void setCost(int cost) {
 		Cost = cost;
+	}
+	public String getStoreId() {
+		return StoreId;
+	}
+	public void setStoreId(String storeId) {
+		StoreId = storeId;
 	}
 	
 

@@ -11,8 +11,10 @@
 <body>
     <div id="bg"></div>
 
-<form class="form-container">
-  
+<form class="form-container" action="">
+  <div class="form-field">
+    <input name="storeid" id="InputName" placeholder="Store Id" required>
+  </div>
   <div class="form-field">
     <input name="foodname" id="InputName" placeholder="Food Name" required>
   </div>
@@ -21,7 +23,7 @@
     <input name="foodcost" id="InputName" placeholder="Cost" required> 
   </div>
   <div class="form-field">
-    <button type="submit" class="btn" onclick="index.html">Register</button>
+    <button type="submit" class="btn" >Add</button>
   </div>
 </form>
 </body>
