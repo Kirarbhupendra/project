@@ -39,7 +39,7 @@ public class modifystore extends HttpServlet {
 				response.setContentType("text/html"); 
 				 PrintWriter pw = response.getWriter();
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			Connection con =DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","oracle","tiger");
+			Connection con =DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","pizza","tiger");
 
 
 			PreparedStatement pst = con.prepareStatement("select * from StoreDetails where StoreId=?");

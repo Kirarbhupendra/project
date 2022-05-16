@@ -30,7 +30,7 @@ public class DeleteStore extends HttpServlet {
 				response.setContentType("text/html"); 
 				PrintWriter pw = response.getWriter();
 				Class.forName("oracle.jdbc.driver.OracleDriver");
-				Connection con =DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","oracle","tiger");
+				Connection con =DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","pizza","tiger");
 				PreparedStatement pst = con.prepareStatement("delete from StoreDetails where StoreId=?");
 
 				pst.setString(1, id);

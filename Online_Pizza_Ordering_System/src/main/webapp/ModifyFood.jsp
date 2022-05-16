@@ -6,6 +6,7 @@
 <meta charset="ISO-8859-1">
 <title>ModifyFood</title>
 <link rel="stylesheet" href="./bootstrap/css/styleUser.css">
+<link rel="stylesheet" href="./bootstrap/css/styleAdminView.css">
 </head>
 <style>
      .formPopup {
@@ -22,6 +23,12 @@
      }
 </style>
 <body>
+	<header>
+            <nav class="navbar"> 
+                <a class="active" href="./ViewStoreList.jsp">Back</a>
+            </nav>
+        </header>
+
     <div id="popupFormModify">
         <form class="form-container">
             <div class="form-field">

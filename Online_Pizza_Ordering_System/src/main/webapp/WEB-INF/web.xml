@@ -119,4 +119,34 @@
     <servlet-name>DeleteStore</servlet-name>
     <url-pattern>/DeleteStore</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddFood</display-name>
+    <servlet-name>AddFood</servlet-name>
+    <servlet-class>com.wipro.controller.AddFood</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddFood</servlet-name>
+    <url-pattern>/AddFood</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteFood</display-name>
+    <servlet-name>DeleteFood</servlet-name>
+    <servlet-class>com.wipro.controller.DeleteFood</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteFood</servlet-name>
+    <url-pattern>/DeleteFood</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ModifyFood</display-name>
+    <servlet-name>ModifyFood</servlet-name>
+    <servlet-class>com.wipro.controller.ModifyFood</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModifyFood</servlet-name>
+    <url-pattern>/ModifyFood</url-pattern>
+  </servlet-mapping>
 </web-app>

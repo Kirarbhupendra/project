@@ -1,4 +1,11 @@
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.SQLException"%>
+<%@ page import="java.io.PrintWriter" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,11 +22,6 @@
     <!-- custom css file link  -->
     <link rel="stylesheet" href="./bootstrap/css/style.css">
 </head>
-<style>
-	#logout:hover{
-	background:red;
-	}
-</style>
 <body>
 	<!-- header section starts      -->
 
@@ -50,6 +52,7 @@
 <section class="home" id="home">
     <div class="swiper-container home-slider">
         <div class="swiper-wrapper wrapper">
+            
             <div class="swiper-slide slide">
                 <div class="content">
                     <span>our special dish</span>
@@ -130,112 +133,59 @@
 <!-- about section ends -->
 
 <!-- menu section starts  -->
+<%
 
+
+try {
+	Class.forName("oracle.jdbc.driver.OracleDriver");	
+} catch (ClassNotFoundException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+Connection con=null;
+Statement smt = null;
+ResultSet rst = null;
+
+String name = request.getParameter("name");
+
+%>
 <section class="menu" id="menu">
 
     <h3 class="sub-heading"> our menu </h3>
-
     <div class="box-container">
-
+					<%
+					      try{
+					     con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","pizza","tiger");
+					  	smt = con.createStatement();
+					  	String sID = request.getParameter("name");
+					  	
+					  	String sql="SELECT * FROM FoodDetails";
+					  	
+					   rst = smt.executeQuery(sql);
+					   while(rst.next()){
+						   %>
         <div class="box">
             <div class="image">
                 <img src="images/menu-1.jpg" alt="">
             </div>
             <div class="content">
-                <h3>delicious food</h3>
-                <a href="#" class="btn">add to cart</a>
-                <span class="price">$12.99</span>
-            </div>
-        </div>
-        <div class="box">
-            <div class="image">
-                <img src="images/menu-1.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>delicious food</h3>
-                <a href="#" class="btn">add to cart</a>
-                <span class="price">$12.99</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="images/menu-1.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>delicious food</h3>
-                <a href="#" class="btn">add to cart</a>
-                <span class="price">$12.99</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="images/menu-1.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>delicious food</h3>
-                <a href="#" class="btn">add to cart</a>
-                <span class="price">$12.99</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="images/menu-1.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>delicious food</h3>
-                <a href="#" class="btn">add to cart</a>
-                <span class="price">$12.99</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="images/menu-1.jpg" alt="">
+                <h3><%=rst.getString("FoodName")%></h3>
                 
-            </div>
-            <div class="content">
-                <h3>delicious food</h3>
-                <a href="#" class="btn">add to cart</a>
-                <span class="price">$12.99</span>
+                <span class="price">Cost Rs<%=rst.getString("Cost")%></span>
+                <button id="addtocart" class="btn">add to cart</button>
             </div>
         </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="images/menu-1.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>delicious food</h3>
-                <a href="#" class="btn">add to cart</a>
-                <span class="price">$12.99</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="images/menu-1.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>delicious food</h3>
-                <a href="#" class="btn">add to cart</a>
-                <span class="price">$12.99</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="images/menu-1.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>delicious food</h3>
-                <a href="#" class="btn">add to cart</a>
-                <span class="price">$12.99</span>
-            </div>
-        </div>
-
+        
+  		<%
+	      }
+	      }
+	      catch(Exception e){
+	    	  e.printStackTrace();
+	      }
+      
+     
+  		 %>
+        
     </div>
 
 </section>

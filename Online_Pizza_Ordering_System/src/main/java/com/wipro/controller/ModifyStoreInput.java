@@ -40,7 +40,7 @@ public class ModifyStoreInput extends HttpServlet {
 		PrintWriter pw = response.getWriter();
 		 try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			Connection con =DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","oracle","tiger");
+			Connection con =DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","pizza","tiger");
 			String Storeid = request.getParameter("storeid");
 			String	StoreName= request.getParameter("storename");
 			String	Address = request.getParameter("address");

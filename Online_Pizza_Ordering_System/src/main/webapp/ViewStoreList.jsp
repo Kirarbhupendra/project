@@ -16,8 +16,10 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-<title>Storelist</title>
+<title>Store List</title>
+
 </head>
+
 <body>
 <%
 
@@ -39,7 +41,13 @@ ResultSet rst = null;
 
 
 %>
-<section class="ftco-section">
+
+<nav class="navbar navbar-light" style="background-color: #28A745;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="./WelcomeAdmin.jsp">Back to Dashboard</a>
+  </div>
+</nav>
+<section class="ftco-section"> 
 		<div class="container" style="padding-top: 50px">
 			<div class="row">
 				<div class="col-md-12">
@@ -58,7 +66,7 @@ ResultSet rst = null;
 					    <tbody>
 					      <%
 					      try{
-					     con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","oracle","tiger");
+					     con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","pizza","tiger");
 					  	smt = con.createStatement();
 					  	String sql="SELECT * FROM StoreDetails";
 					  	
@@ -70,11 +78,10 @@ ResultSet rst = null;
 						   <td><%= rst.getString("StoreName") %></td>
 						   <td><%= rst.getString("Address") %></td>
 						   <td><%= rst.getString("PhoneNo") %></td>
-						   <td><a href='./viewstore.jsp?u=<%=rst.getString("StoreId") %>' class="btn btn-success">View</a></td>
+						   <td><a href='./viewstore.jsp?name=<%=rst.getString("StoreId") %>' class="btn btn-success">View</a></td>
 						  
 						   
 						   </tr>
-						   
 					
 						   
 						   
