@@ -99,4 +99,24 @@
     <servlet-name>ModifyStoreInput</servlet-name>
     <url-pattern>/ModifyStoreInput</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LogoutHandler</display-name>
+    <servlet-name>LogoutHandler</servlet-name>
+    <servlet-class>com.wipro.controller.LogoutHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutHandler</servlet-name>
+    <url-pattern>/LogoutHandler</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteStore</display-name>
+    <servlet-name>DeleteStore</servlet-name>
+    <servlet-class>com.wipro.controller.DeleteStore</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteStore</servlet-name>
+    <url-pattern>/DeleteStore</url-pattern>
+  </servlet-mapping>
 </web-app>

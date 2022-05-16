@@ -31,6 +31,7 @@
                 <a class="active" href="#home">Home</a>
                 <a href="./AddFood.jsp">Add Food</a>
                 <a href="./ModifyFood.jsp">Modify</a>
+                <a href="./DeleteFood.jsp">Delete Food</a>
             </nav>
         </header>
         <section class="menu" id="menu">

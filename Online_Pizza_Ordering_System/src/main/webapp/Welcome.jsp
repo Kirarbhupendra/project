@@ -5,207 +5,289 @@
 <head>
   <title>Welcome</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="CSS/button.css"> 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-<style>
-  .head-text {
-    color: rgb(67, 202, 232);
-    font-family: Lobster;
-    font-size: 200px;
-  }
-  .subhead-text{
-    color: rgb(67, 202, 232);
-    font-family: Lobster;
-    font-size: 70px;}
-</style>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-      <link rel="stylesheet" href="CSS/style.css">
-  
-  <script src="bg_effect.js"></script>
-  <style>
-    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
-    .navbar {
-      margin-bottom: 50px;
-      border-radius: 0;
-    }
-    
-    /* Remove the jumbotron's default bottom margin */ 
-     .jumbotron {
-      margin-bottom: 0;
-    }
-   
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
-  </style>
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="./bootstrap/css/style.css">
 </head>
+<style>
+	#logout:hover{
+	background:red;
+	}
+</style>
 <body>
+	<!-- header section starts      -->
 
-<script src='https://cdn.rawgit.com/Siddharth11/gradStop.js/master/gradstop.js'></script>
+<header>
 
-  
+    <a href="#" class="logo"><i class="fas fa-utensils"></i>Pizza</a>
 
-    <script  src="CSS/index.js"></script>
+    <nav class="navbar">
+        <a class="active" href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#menu">menu</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <a href="#" class="fas fa-shopping-cart"></a>
+        <a id="logout" style="text-decoration:none; background:none;" href="./Logout">Logout</a>
+    </div>
+</header>
+
+<!-- header section ends-->
+
+<!-- search form  -->
 
 
-<div class="background">
- 
+<!-- home section starts  -->
 
-<div class="jumbotron">
-  <div class="container text-center">
-    <div class="head-text">Delicious</div>      
-    <div class="subhead-text">Pizza</div>
-  </div>
-</div>
+<section class="home" id="home">
+    <div class="swiper-container home-slider">
+        <div class="swiper-wrapper wrapper">
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>our special dish</span>
+                    <h3>spicy pizza</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit natus dolor cumque?</p>
+                </div>
+                <div class="image">
+                    <img src="images/home-img-3.png" alt="">
+                </div>
+            </div>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-    
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-      	<li><a href="logout.jsp"><h4><span class="glyphicon glyphicon-user"></span> Log Out</h4></a></li> 
-        <li><a href="cart.jsp"><h4><span class="glyphicon glyphicon-shopping-cart"></span> Cart</h4></a></li>
-      </ul>
-    </div>
-  </div>
-</nav> 
-<p id="demo">
-<script>
-/* function confirmBox() {
-    	var qty = prompt("Please enter quantity", 1);
-        var xhttp = new XMLHttpRequest();
-    	xhttp.open("GET", "addToCart.jsp?qty="+qty+"\"", true);
-    	xhttp.send();
-    		} */
-</script></p>
-<div class="container">    
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">Margherita Pizza</div>
-        <div class="panel-body"><img src="CSS/chickenBiryani.jpg" class="img-responsive" style="height:195px; width:100%" alt="Chicken Biryani"></div>
-        <div class="panel-footer">Rs. 200</div>
-       <a href="addToCart.jsp?p=1"><button class="button" style="vertical-align:middle" id="1" ><!-- onclick="confirmBox()" --><span>Add to cart </span></button></a>
-       
-      </div>
-    </div>
-    <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading">Golden Corn Pizza</div>
-        <div class="panel-body"><img src="CSS/veg_biryani.jpeg" class="img-responsive" style="height:195px; width:100%" alt="Image"></div>
-        <div class="panel-footer">Rs. 180</div>
-        <a href="addToCart.jsp?p=2"><button class="button" style="vertical-align:middle" id="2" ><!-- onclick="confirmBox()" --><span>Add to cart </span></button></a>
-      </div>
-    </div>
-    <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading">Jalapeno & Red Paprika Pizza</div>
-        <div class="panel-body"><img src="CSS/Chicken_pasta.jpg" class="img-responsive" style="height:195px; width:100%" alt="Image"></div>
-        <div class="panel-footer">Rs. 200</div>
-        <a href="addToCart.jsp?p=3"><button class="button" style="vertical-align:middle" id="3"> <!-- onclick="confirmBox()"> --><span>Add to cart </span></button></a>
-      </div>
-    </div>
-  </div>
-</div><br>
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>our special dish</span>
+                    <h3>chicken pizza</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit natus dolor cumque?</p>
+                </div>
+                <div class="image">
+                    <img src="images/home-img-3.png" alt="">
+                </div>
+            </div>
 
-<div class="container">    
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">Double Cheese Margherita Pizza</div>
-        <div class="panel-body"><img src="CSS/Mushroom_pasta.jpg" class="img-responsive" style="height:195px; width:100%" alt="Image"></div>
-        <div class="panel-footer">Rs. 180</div>
-        <a href="addToCart.jsp?p=4"><button class="button" style="vertical-align:middle" id="4"><!--  onclick="confirmBox()"> --><span>Add to cart </span></button></a>
-      </div>
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>our special dish</span>
+                    <h3>hot pizza</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit natus dolor cumque?</p>
+                </div>
+                <div class="image">
+                    <img src="images/home-img-3.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
     </div>
-     <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">Onion Pizza</div>
-        <div class="panel-body"><img src="CSS/Chicken_Pizza.jpg" class="img-responsive" style="height:195px; width:100%" alt="Image"></div>
-        <div class="panel-footer">Rs. 250</div>
-        <a href="addToCart.jsp?p=5"><button class="button" style="vertical-align:middle" id="5"><!--  onclick="confirmBox()"> --><span>Add to cart </span></button></a>
-      </div>
-    </div>
-     <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">Farmhouse Vegetable Pizza</div>
-        <div class="panel-body"><img src="CSS/Veg_Pizza.jpeg" class="img-responsive" style="height:195px; width:100%" alt="Image"></div>
-        <div class="panel-footer">Rs. 230</div>
-        <a href="addToCart.jsp?p=6"><button class="button" style="vertical-align:middle" id="6"><!--  onclick="confirmBox()"> --><span>Add to cart </span></button></a>
-      </div>
-    </div>
-    <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading">Crisp Capsicum & Fresh Tomato Pizza</div>
-        <div class="panel-body"><img src="CSS/Caesar_Salad.jpeg" class="img-responsive" style="height:195px; width:100%" alt="Image"></div>
-        <div class="panel-footer">Rs. 180</div>
-        <a href="addToCart.jsp?p=7"><button class="button" style="vertical-align:middle" id="7"><!--  onclick="confirmBox()"> --><span>Add to cart </span></button></a>
-      </div>
-    </div>
-    <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading">Spicy Triple Tango</div>
-        <div class="panel-body"><img src="CSS/Choco_Mousse.jpg" class="img-responsive" style="height:195px; width:100%" alt="Image"></div>
-        <div class="panel-footer">Rs. 150</div>
-        <a href="addToCart.jsp?p=8"><button class="button" style="vertical-align:middle" id="8"><!--  onclick="confirmBox()"> --><span>Add to cart </span></button></a>
-      </div>
-    </div>
-      <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading">Paneer Special Pizza</div>
-        <div class="panel-body"><img src="CSS/Rasgulla.JPG" class="img-responsive" style="height:195px; width:100%" alt="Image"></div>
-        <div class="panel-footer">Rs. 50</div>
-        <a href="addToCart.jsp?p=9"><button class="button" style="vertical-align:middle" id="9"><span>Add to cart </span></button></a>
-      </div>
-    </div>
-      <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading">Lemon Iced Tea</div>
-        <div class="panel-body"><img src="CSS/Iced_tea.jpg" class="img-responsive" style="height:195px; width:100%" alt="Image"></div>
-        <div class="panel-footer">Rs. 40</div>
-        <a href="addToCart.jsp?p=101"><button class="button" style="vertical-align:middle" id="101"> <!-- onclick="confirmBox()"> --><span>Add to cart </span></button></a>
-      </div>
-    </div>
-      <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading">Herby Pizza</div>
-        <div class="panel-body"><img src="CSS/lassi.jpg" class="img-responsive" style="height:195px; width:100%" alt="Image"></div>
-        <div class="panel-footer">Rs. 40</div>
-        <a href="addToCart.jsp?p=102"><button class="button" style="vertical-align:middle" id="102"> <!-- onclick="confirmBox()"> --><span>Add to cart </span></button></a>
-      </div>
-    </div>
-      <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading">Vegetable Loaded Pizza</div>
-        <div class="panel-body"><img src="CSS/coke.jpg" class="img-responsive" style="height:195px; width:100%" alt="Image"></div>
-        <div class="panel-footer">Rs. 40</div>
-        <a href="addToCart.jsp?p=103"><button class="button" style="vertical-align:middle" id="103"><!--  onclick="confirmBox()"> --><span>Add to cart </span></button></a>
-      </div>
-    </div>
-  </div>
-</div><br><br>
+</section>
 
-<footer class="container-fluid text-center">
-  <p>Designed and Devloped by Wipro</p>  
-  
-</footer>
-</div>
+<!-- home section ends -->
+
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h3 class="sub-heading"> about us </h3>
+    <h1 class="heading"> why choose us? </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="images/about-img.png" alt="">
+        </div>
+
+        <div class="content">
+            <h3>best pizza in the country</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, sequi corrupti corporis quaerat voluptatem ipsam neque labore modi autem, saepe numquam quod reprehenderit rem? Tempora aut soluta odio corporis nihil!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, nemo. Sit porro illo eos cumque deleniti iste alias, eum natus.</p>
+            <div class="icons-container">
+                <div class="icons">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>free delivery</span>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span>easy payments</span>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-headset"></i>
+                    <span>24/7 service</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- menu section starts  -->
+
+<section class="menu" id="menu">
+
+    <h3 class="sub-heading"> our menu </h3>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="images/menu-1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>delicious food</h3>
+                <a href="#" class="btn">add to cart</a>
+                <span class="price">$12.99</span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="images/menu-1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>delicious food</h3>
+                <a href="#" class="btn">add to cart</a>
+                <span class="price">$12.99</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/menu-1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>delicious food</h3>
+                <a href="#" class="btn">add to cart</a>
+                <span class="price">$12.99</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/menu-1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>delicious food</h3>
+                <a href="#" class="btn">add to cart</a>
+                <span class="price">$12.99</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/menu-1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>delicious food</h3>
+                <a href="#" class="btn">add to cart</a>
+                <span class="price">$12.99</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/menu-1.jpg" alt="">
+                
+            </div>
+            <div class="content">
+                <h3>delicious food</h3>
+                <a href="#" class="btn">add to cart</a>
+                <span class="price">$12.99</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/menu-1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>delicious food</h3>
+                <a href="#" class="btn">add to cart</a>
+                <span class="price">$12.99</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/menu-1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>delicious food</h3>
+                <a href="#" class="btn">add to cart</a>
+                <span class="price">$12.99</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/menu-1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>delicious food</h3>
+                <a href="#" class="btn">add to cart</a>
+                <span class="price">$12.99</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- menu section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>locations</h3>
+            <a href="#">india</a>
+            <a href="#">japan</a>
+            <a href="#">USA</a>
+            <a href="#">france</a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">menu</a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#">+123-456-7890</a>
+            <a href="#">team16@gmail.com</a>
+            <a href="#">mumbai, india - 400104</a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">twitter</a>
+            <a href="#">instagram</a>
+            <a href="#">linkedin</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- footer section ends -->
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+
 </body>
+<script src="js/script.js"></script>
 </html>

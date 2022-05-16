@@ -115,11 +115,13 @@ form .btn {
 </style>
 <body>
 		<header>
-            <nav class="navbar"> 
-                <a class="active" href="#home">Home</a>
-                <a onclick="openForm()"  href="#">Add Store</a>
-                <a onclick="openFormModify()"  href="#">Modify Store</a>
-                <a href="./ViewStoreList.jsp">View</a>
+            <nav class="navbar" > 
+                <a style="text-decoration:none" class="active" href="#home">Home</a>
+                <a style="text-decoration:none" onclick="openForm()"  href="#">Add Store</a>
+                <a style="text-decoration:none" onclick="openFormModify()"  href="#">Modify Store</a>
+                <a style="text-decoration:none" onclick="openFormDelete()"  href="#">Delete Store</a>
+                <a style="text-decoration:none" href="./ViewStoreList.jsp">View</a>
+                <a style="text-decoration:none" href="./Logout">Logout</a>
             </nav>
         </header>
  	
@@ -161,7 +163,7 @@ form .btn {
 
     <div class="formPopup" id="popupFormMod">
         <form >
-            <div class="form-field">
+            	<div class="form-field">
                     <input type="text" name="storename" placeholder="Store Name" required>
                   </div>
                 
@@ -178,11 +180,24 @@ form .btn {
                     </div>
         </form>
     </div>
+    
+    <div class="formPopup" id="popupFormDelete">
+        <form action="./deletestore" method="get">
+            <div class="form-field">
+                       <input type="text" name="id" placeholder="Store ID" required>
+                   </div>
+                    <div class="form-field">
+                        <button type="submit" class="btn btn-primary">Delete</button>
+                        <button class="btn btn-primary" onclick="closeFormDelete()">Close</button>
+                    </div>
+        </form>
+    </div>
 </body>
 <script >
     function openForm() {
         document.getElementById("popupForm").style.display = "block";
         document.getElementById("popupFormModify").style.display = "none";
+        document.getElementById("popupFormDelete").style.display = "none";
       }
       function closeForm() {
         document.getElementById("popupForm").style.display = "none";
@@ -192,6 +207,7 @@ form .btn {
       function openFormModify() {
         document.getElementById("popupFormModify").style.display = "block";
         document.getElementById("popupForm").style.display = "none";
+        document.getElementById("popupFormDelete").style.display = "none";
       }
       function closeFormModify() {
         document.getElementById("popupFormModify").style.display = "none";
@@ -206,6 +222,16 @@ form .btn {
         
       }
       
+      
+      function openFormDelete() {
+          document.getElementById("popupFormDelete").style.display = "block";
+          document.getElementById("popupFormModify").style.display = "none";
+          document.getElementById("popupForm").style.display = "none";
+        }
+        function closeFormDelete() {
+          document.getElementById("popupFormDelete").style.display = "none";
+        }
+
 
 </script>
 
