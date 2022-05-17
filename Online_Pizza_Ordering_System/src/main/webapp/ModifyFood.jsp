@@ -30,7 +30,8 @@
         </header>
 
     <div id="popupFormModify">
-        <form class="form-container">
+        <form class="form-container" action="./modifyfood" method="get">
+            
             <div class="form-field">
                 <input name="foodid" id="InputName" placeholder="Food ID" required>
             </div>

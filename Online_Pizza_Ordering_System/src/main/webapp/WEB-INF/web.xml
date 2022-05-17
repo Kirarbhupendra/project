@@ -149,4 +149,14 @@
     <servlet-name>ModifyFood</servlet-name>
     <url-pattern>/ModifyFood</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ModifyFoodInput</display-name>
+    <servlet-name>ModifyFoodInput</servlet-name>
+    <servlet-class>com.wipro.controller.ModifyFoodInput</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModifyFoodInput</servlet-name>
+    <url-pattern>/ModifyFoodInput</url-pattern>
+  </servlet-mapping>
 </web-app>

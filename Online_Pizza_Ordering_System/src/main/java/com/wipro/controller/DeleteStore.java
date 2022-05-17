@@ -31,17 +31,19 @@ public class DeleteStore extends HttpServlet {
 				PrintWriter pw = response.getWriter();
 				Class.forName("oracle.jdbc.driver.OracleDriver");
 				Connection con =DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","pizza","tiger");
-				PreparedStatement pst = con.prepareStatement("delete from StoreDetails where StoreId=?");
-
-				pst.setString(1, id);
-				ResultSet rs= pst.executeQuery();
-				if(rs.next()) {
-					RequestDispatcher dispatcher = request.getRequestDispatcher("/WelcomeAdmin.jsp");
+				PreparedStatement pst1 = con.prepareStatement("delete from FoodDetails where StoreId=?");
+				pst1.setString(1, id);
+				int r=pst1.executeUpdate();
+				
+				PreparedStatement pst2 = con.prepareStatement("delete from StoreDetails where StoreId=?");
+				pst2.setString(1, id);
+				int r1=pst2.executeUpdate();
+				if(r==1 && r1==1) {
+					RequestDispatcher dispatcher = request.getRequestDispatcher("./WelcomeAdmin.jsp");
 					dispatcher.forward(request, response);
+
 				}
-				else {
-					pw.println("<h2>Enter Correct StoreId</h2>");
-				}
+				
 			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
