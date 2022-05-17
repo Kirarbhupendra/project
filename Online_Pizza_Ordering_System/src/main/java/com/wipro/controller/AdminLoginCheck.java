@@ -39,7 +39,7 @@ public class AdminLoginCheck extends HttpServlet {
 			response.setContentType("text/html"); 
 			 PrintWriter pw = response.getWriter();
 			 Class.forName("oracle.jdbc.driver.OracleDriver");
-			 Connection con =DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","oracle","tiger");
+			 Connection con =DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","pizza","tiger");
    String s1 = request.getParameter("email");
    String s2 = request.getParameter("password");
    PreparedStatement pst = con.prepareStatement("select * from AdminDetails where EmailId=? and Password=?");

@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.SQLException"%>
 <%@ page import="java.io.PrintWriter" %>
 <!DOCTYPE html>
 <html>
@@ -25,12 +30,30 @@
 	}
 </style>
 <body>
+<%
+
+
+try {
+	Class.forName("oracle.jdbc.driver.OracleDriver");	
+} catch (ClassNotFoundException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+Connection con=null;
+Statement smt = null;
+ResultSet rst = null;
+
+String name = request.getParameter("name");
+
+%>
      
         <header>
             <nav class="navbar"> 
-                <a class="active" href="#home">Home</a>
-                <a href="./AddFood.jsp">Add Food</a>
+                <a class="active" href="./ViewStoreList.jsp">Back</a>
+                <a href="./AddFood.jsp?name=<%= request.getParameter("name")%>">Add Food</a>
                 <a href="./ModifyFood.jsp">Modify</a>
+                <a href="./DeleteFood.jsp">Delete Food</a>
+                <p style="float:right;">Store ID - <%= request.getParameter("name")%></p>
             </nav>
         </header>
         <section class="menu" id="menu">
@@ -38,99 +61,40 @@
             <h3 class="sub-heading"> our menu </h3>
         
             <div class="box-container">
-        
+        	 <%
+					      try{
+					     con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","pizza","tiger");
+					  	smt = con.createStatement();
+					  	String sID = request.getParameter("name");
+					  	
+					  	String sql="SELECT * FROM FoodDetails where STOREID="+ "\'"+sID+"\'";
+					  	
+					   rst = smt.executeQuery(sql);
+					   while(rst.next()){
+						   %>
+                
                 <div class="box">
                     <div class="image">
-                        <img src="img/menu-1.jpg" alt="">
+                        <img src="images/menu-1.jpg" alt="">
                     </div>
                     <div class="content">
-                        <h3>Food Name</h3>
-                        <p>Food ID</p>
-                        <h4 class="price">Cost $12.99</h4>
+                        <h3><%=rst.getString("FoodName")%></h3>
+                        <p>Food ID <%=rst.getString("FoodId")%></p>
+                        <h4 class="price">Cost Rs<%=rst.getString("Cost")%></h4>
                     </div>
                 </div>
+                
+        		 <%
+					      }
+					      }
+					      catch(Exception e){
+					    	  e.printStackTrace();
+					      }
+					      
+					     
+					   %>
         
-                <div class="box">
-                    <div class="image">
-                        <img src="img/menu-2.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>Food Name</h3>
-                        <p>Food ID</p>
-                        <h4 class="price">Cost $12.99</h4>
-                    </div>
-                </div>
-        
-                <div class="box">
-                    <div class="image">
-                        <img src="img/menu-3.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>Food Name</h3>
-                        <p>Food ID</p>
-                        <h4 class="price">Cost $12.99</h4>
-                    </div>
-                </div>
-        
-                <div class="box">
-                    <div class="image">
-                        <img src="img/menu-4.jpg" alt="">
-                        
-                    </div>
-                    <div class="content">
-                        <h3>Food Name</h3>
-                        <p>Food ID</p>
-                        <h4 class="price">Cost $12.99</h4>
-                    </div>
-                </div>
-        
-                <div class="box">
-                    <div class="image">
-                        <img src="img/menu-5.jpg" alt="">
-                        
-                    </div>
-                    <div class="content">
-                        <h3>Food Name</h3>
-                        <p>Food ID</p>
-                        <h4 class="price">Cost $12.99</h4>
-                    </div>
-                </div>
-        
-                <div class="box">
-                    <div class="image">
-                        <img src="img/menu-6.jpg" alt="">
-                        
-                    </div>
-                    <div class="content">
-                        <h3>Food Name</h3>
-                        <p>Food ID</p>
-                        <h4 class="price">Cost $12.99</h4>
-                    </div>
-                </div>
-        
-                <div class="box">
-                    <div class="image">
-                        <img src="img/menu-7.jpg" alt="">
-                         
-                    </div>
-                    <div class="content">
-                        <h3>Food Name</h3>
-                        <p>Food ID</p>
-                        <h4 class="price">Cost $12.99</h4>
-                    </div>
-                </div>
-        
-                <div class="box">
-                    <div class="image">
-                        <img src="img/menu-8.jpg" alt="">
-                         
-                    </div>
-                    <div class="content">
-                        <h3>Food Name</h3>
-                        <p>Food ID</p>
-                        <h4 class="price">Cost $12.99</h4>
-                    </div>
-                </div>
+     
             </div>
         
         </section>
