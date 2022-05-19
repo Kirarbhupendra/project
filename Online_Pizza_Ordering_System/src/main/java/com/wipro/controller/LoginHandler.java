@@ -24,9 +24,11 @@ public class LoginHandler extends HttpServlet {
 		request.setAttribute("choice", choice);
 		if(choice.equals("user")) {
 			request.getRequestDispatcher("./userlogin.jsp").forward(request, response);
+			request.getSession().setAttribute("user", choice);
 		}
 		else if (choice.equals("admin")) {
 			request.getRequestDispatcher("./adminlogin.jsp").forward(request, response);
+			request.getSession().setAttribute("admin", choice);
 		}
 	}
 

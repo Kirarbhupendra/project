@@ -159,4 +159,34 @@
     <servlet-name>ModifyFoodInput</servlet-name>
     <url-pattern>/ModifyFoodInput</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>addToCart</display-name>
+    <servlet-name>addToCart</servlet-name>
+    <servlet-class>com.wipro.controller.addToCart</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addToCart</servlet-name>
+    <url-pattern>/addToCart</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Cart</display-name>
+    <servlet-name>Cart</servlet-name>
+    <servlet-class>com.wipro.controller.Cart</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Cart</servlet-name>
+    <url-pattern>/Cart</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RemoveFoodCart</display-name>
+    <servlet-name>RemoveFoodCart</servlet-name>
+    <servlet-class>com.wipro.controller.RemoveFoodCart</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemoveFoodCart</servlet-name>
+    <url-pattern>/RemoveFoodCart</url-pattern>
+  </servlet-mapping>
 </web-app>

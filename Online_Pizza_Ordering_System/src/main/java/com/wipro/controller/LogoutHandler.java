@@ -19,6 +19,7 @@ public class LogoutHandler extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		 response.setContentType("text/html");
+		
 		 request.getRequestDispatcher("index.html").include(request, response);  
          HttpSession session=request.getSession();  
          session.invalidate();

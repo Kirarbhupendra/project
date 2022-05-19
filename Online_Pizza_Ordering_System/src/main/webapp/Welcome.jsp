@@ -1,3 +1,5 @@
+<%@page import="com.wipro.model.FoodCart"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
@@ -24,6 +26,7 @@
 </head>
 <body>
 	<!-- header section starts      -->
+	<%ArrayList<FoodCart> al = new ArrayList<FoodCart>(); %>
 
 <header>
 
@@ -37,7 +40,7 @@
 
     <div class="icons">
         <i class="fas fa-bars" id="menu-bars"></i>
-        <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="./Cart.jsp" class="fas fa-shopping-cart"></a>
         <a id="logout" style="text-decoration:none; background:none;" href="./Logout">Logout</a>
     </div>
 </header>
@@ -172,7 +175,8 @@ String name = request.getParameter("name");
                 <h3><%=rst.getString("FoodName")%></h3>
                 
                 <span class="price">Cost Rs<%=rst.getString("Cost")%></span>
-                <button id="addtocart" class="btn">add to cart</button>
+          
+                <a id="addtocart" class="btn" href='./AddToCart?foodid=<%=rst.getString("FoodId") %>'>add to cart</a>
             </div>
         </div>
         
