@@ -189,4 +189,14 @@
     <servlet-name>RemoveFoodCart</servlet-name>
     <url-pattern>/RemoveFoodCart</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>removeFromCart</display-name>
+    <servlet-name>removeFromCart</servlet-name>
+    <servlet-class>com.wipro.controller.removeFromCart</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>removeFromCart</servlet-name>
+    <url-pattern>/removeFromCart</url-pattern>
+  </servlet-mapping>
 </web-app>
