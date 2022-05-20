@@ -137,8 +137,6 @@
 
 <!-- menu section starts  -->
 <%
-
-
 try {
 	Class.forName("oracle.jdbc.driver.OracleDriver");	
 } catch (ClassNotFoundException e) {
@@ -148,9 +146,7 @@ try {
 Connection con=null;
 Statement smt = null;
 ResultSet rst = null;
-
 String name = request.getParameter("name");
-
 %>
 <section class="menu" id="menu">
 
