@@ -3,35 +3,44 @@ package com.wipro.model;
 import java.util.Date;
 
 public class CreditCardDetails {
+	private String OrderId;
+	private String Cardnumber;
+	private String Cardholdername;
+	private String Expirydate;
+	private int ccv;
+	public String getExpirydate() {
+		return Expirydate;
+	}
+	public void setExpirydate(String expirydate) {
+		Expirydate = expirydate;
+	}
 	
-	long CreditCardNumber;
-	Date ValidFrom;
-	Date validTo;
-	long Balance;
-	public long getCreditCardNumber() {
-		return CreditCardNumber;
+	public String getOrderId() {
+		return OrderId;
 	}
-	public void setCreditCardNumber(long creditCardNumber) {
-		CreditCardNumber = creditCardNumber;
+	public void setOrderId(String orderId) {
+		OrderId = orderId;
 	}
-	public Date getValidFrom() {
-		return ValidFrom;
+	public String getCardnumber() {
+		return Cardnumber;
 	}
-	public void setValidFrom(Date validFrom) {
-		ValidFrom = validFrom;
+	public void setCardnumber(String cardnumber) {
+		Cardnumber = cardnumber;
 	}
-	public Date getValidTo() {
-		return validTo;
+	public String getCardholdername() {
+		return Cardholdername;
 	}
-	public void setValidTo(Date validTo) {
-		this.validTo = validTo;
+	public void setCardholdername(String cardholdername) {
+		Cardholdername = cardholdername;
 	}
-	public long getBalance() {
-		return Balance;
+	
+	public int getCcv() {
+		return ccv;
 	}
-	public void setBalance(long balance) {
-		Balance = balance;
+	public void setCcv(int ccv) {
+		this.ccv = ccv;
 	}
+	
 	
 
 }

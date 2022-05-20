@@ -33,15 +33,15 @@ Payment card number: (4) VISA, (51 -> 55) MasterCard, (36-38-39) DinersClub, (34
     </div>
   </div>
   <div class="col2">
-  <form action="">
+  <form action="./checkout" method="post">
     <label>Card Number</label>
-    <input class="number" type="text" ng-model="ncard" maxlength="19" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+    <input class="number" name="cardnumber" type="text" ng-model="ncard" maxlength="19" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
     <label>Cardholder name</label>
-    <input class="inputname" type="text" placeholder=""/>
+    <input class="inputname" name="cardholdername" type="text" placeholder=""/>
     <label>Expiry date</label>
-    <input class="expire" type="text" placeholder="MM / YYYY"/>
+    <input class="expire" type="text" name="expirydate" placeholder="MM / YYYY"/>
     <label>Security Number</label>
-    <input class="ccv" type="text" placeholder="CVC" maxlength="3" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+    <input class="ccv" type="text" name="cvc" placeholder="CVC" maxlength="3" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
     <button class="buy"> Pay <%= request.getParameter("amount")%> </button>
   </form>
   </div>

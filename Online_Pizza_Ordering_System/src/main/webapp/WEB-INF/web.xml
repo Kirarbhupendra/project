@@ -199,4 +199,14 @@
     <servlet-name>removeFromCart</servlet-name>
     <url-pattern>/removeFromCart</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CreditCardInput</display-name>
+    <servlet-name>CreditCardInput</servlet-name>
+    <servlet-class>com.wipro.controller.CreditCardInput</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreditCardInput</servlet-name>
+    <url-pattern>/CreditCardInput</url-pattern>
+  </servlet-mapping>
 </web-app>
