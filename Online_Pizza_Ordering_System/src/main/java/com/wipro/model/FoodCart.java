@@ -5,6 +5,7 @@ public class FoodCart  {
 	String FoodId;
 	String FoodName;
 	int Cost;
+	int Quantity;
 	
 	public FoodCart() {
 		// TODO Auto-generated constructor stub
@@ -43,6 +44,11 @@ public class FoodCart  {
 	public void setStoreId(String storeId) {
 		FoodId = storeId;
 	}
-  
+	public int getQuantity() {
+		return Quantity;
+	}
+	public void setQuantity(int qty) {
+		Quantity = qty;
+	}
   
 }

@@ -63,10 +63,8 @@ public class addToCart extends HttpServlet {
 				foodCart.setFoodId(rst.getString("FoodId"));
 				foodCart.setFoodName(rst.getString("FoodName"));
 				foodCart.setCost(rst.getInt("Cost"));
+				foodCart.setQuantity(1);
 				al.add(foodCart);
-				
-				
-				
 			}
 			session.setAttribute("Il", al);
 			con.close();
@@ -78,6 +76,8 @@ public class addToCart extends HttpServlet {
 		}
 		 }
 		 
+		
+		 
 		 else {
 			 al =(ArrayList<FoodCart>) session.getAttribute("Il");
 			 try{
@@ -87,12 +87,15 @@ public class addToCart extends HttpServlet {
 					PrintWriter pw = response.getWriter();
 					ResultSet rst = pst.executeQuery();
 					
+					
 					while(rst.next()){
-						FoodCart foodCart = new FoodCart();
-						foodCart.setFoodId(rst.getString("FoodId"));
-						foodCart.setFoodName(rst.getString("FoodName"));
-						foodCart.setCost(rst.getInt("Cost"));
-						al.add(foodCart);
+						
+							FoodCart foodCart = new FoodCart();
+							foodCart.setFoodId(rst.getString("FoodId"));
+							foodCart.setFoodName(rst.getString("FoodName"));
+							foodCart.setCost(rst.getInt("Cost"));
+							foodCart.setQuantity(1);
+							al.add(foodCart);
 						
 						
 					}
